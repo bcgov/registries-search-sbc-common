@@ -1,0 +1,4 @@
+include requirements.txt
+include src/search_solr_importer/logging.conf
+include LICENSE
+include README.md
