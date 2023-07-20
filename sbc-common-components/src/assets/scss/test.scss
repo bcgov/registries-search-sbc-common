@@ -1,0 +1,216 @@
+@import 'theme.scss';
+
+@font-face {
+  font-family: 'BCSans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/BCSans/BCSans-Regular.woff2') format('woff2'),
+    /* Optimized for very modern browsers */
+      url('../fonts/BCSans/BCSans-Regular.woff') format('woff'),
+    local('BCSans'); /* Modern Browsers */
+  font-display: swap;
+}
+@font-face {
+  font-family: 'BCSans';
+  font-style: italic;
+  src: url('../fonts/BCSans/BCSans-Italic.woff2') format('woff2'),
+    /* Optimized for very modern browsers */
+      url('../fonts/BCSans/BCSans-Italic.woff') format('woff'),
+    local('BCSans'); /* Modern Browsers */
+  font-display: swap;
+}
+@font-face {
+  font-family: 'BCSans';
+  font-weight: 700;
+  src: url('../fonts/BCSans/BCSans-Bold.woff2') format('woff2'),
+    /* Optimized for very modern browsers */
+      url('../fonts/BCSans/BCSans-Bold.woff') format('woff'),
+    local('BCSans'); /* Modern Browsers */
+  font-display: swap;
+}
+@font-face {
+  font-family: 'BCSans';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/BCSans/BCSans-BoldItalic.woff2') format('woff2'),
+    /* Optimized for very modern browsers */
+      url('../fonts/BCSans/BCSans-BoldItalic.woff') format('woff'),
+    local('BCSans'); /* Modern Browsers */
+  font-display: swap;
+}
+$app-header-height : 70px; // 70px
+
+// BC GOV BLUE PALETTE
+$BCgovBlue0: #e0e7ed;
+$BCgovBlue1: #b3c2d1;
+$BCgovBlue2: #8099b3;
+$BCgovBlue3: #4d7094;
+$BCgovBlue4: #26527d;
+$BCgovBlue5: #003366; // PRIMARY BLUE
+$BCgovBlue6: #002e5e;
+$BCgovBlue7: #002753;
+$BCgovBlue8: #002049;
+$BCgovBlue9: #001438;
+
+html,
+body {
+  min-height: 100vh;
+  font-family: 'BCSans', Verdana, Arial, sans-serif;
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 1224px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $gray9;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02rem;
+  font-weight: 700;
+}
+
+h1 {
+  line-height: 1.25;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-weight: 400;
+}
+
+strong {
+  letter-spacing: -0.01rem;
+}
+
+.v-application {
+  font-family: 'BCSans', Verdana, Arial, sans-serif; // BC Government Font
+  flex: 1 1 auto;
+  .body,
+  .body-1,
+  .body-2,
+  .title,
+  .caption,
+  .headline,
+  .subtitle-1,
+  .subtitle-2 {
+    font-family: 'BCSans', Verdana, Arial, sans-serif !important; // BC Government Font
+    letter-spacing: 0 !important;
+  }
+
+  [class^='subtitle'] {
+    color: $gray9;
+  }
+}
+
+.theme--light.v-application {
+  color: $gray7;
+  background-color: $gray1;
+}
+
+// Fieldsets
+fieldset {
+  border: none;
+}
+
+legend {
+  display: block;
+  color: $gray9;
+  font-weight: 700;
+}
+
+// Form Buttons
+.form__btns {
+  .v-btn {
+    min-width: 7rem !important;
+
+    &.primary {
+      font-weight: 700;
+    }
+  }
+}
+
+// BC gov gold CTA button
+.cta-btn,
+.cta-btn:hover {
+  color: var(--v-bcgovblue-base) !important;
+}
+
+// Helpers
+.nobr {
+  white-space: nowrap; // Utility class to prevent orphaned text
+}
+
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  background: $gray2;
+  &.transparent {
+    background: #bdbdbd4d !important;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.loading-inner-container {
+  display: flex;
+  justify-content: center;
+}
+
+.loading-center {
+  width: 100%;
+}
+
+.gray-9 {
+  color: $gray9;
+}
+
+.layout-wrapper{
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+}
+
+.app-header{
+  flex: 0 0 auto;
+  height: $app-header-height;
+  z-index: 2;
+}
+
+.app-body{
+  flex: 1 1 auto;
+  margin-top: $app-header-height; // Offset the height of the fixed header
+}
