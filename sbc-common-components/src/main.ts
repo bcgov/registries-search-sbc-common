@@ -30,6 +30,8 @@ async function start () {
 
   // start Vue application
   console.info('Starting app...') // eslint-disable-line no-console
+  debugger
+  const go = store
   app.use(router).use(store).use(vuetify).mount('#app')
 }
 

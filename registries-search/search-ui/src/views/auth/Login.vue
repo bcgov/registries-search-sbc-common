@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import SbcLogin from '@/sbc-common-components/components/SbcLogin.vue'
+import SbcLogin from 'sbc-common-components/src/components/SbcLogin.vue'
 
 const route = useRoute()
 const redirectUrl = route.query.redirect as string

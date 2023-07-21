@@ -7,7 +7,7 @@ import Hotjar from 'vue-hotjar'
 // Local
 import App from '@/App.vue'
 import { createVueRouter } from '@/router'
-import store from '@/store'
+import store from 'sbc-common-components/src/store'
 import { fetchConfig, getFeatureFlag, initLdClient } from '@/utils'
 import vuetify from './plugins/vuetify'
 
@@ -17,7 +17,7 @@ import '@/assets/styles/base.scss'
 import '@/assets/styles/layout.scss'
 import '@/assets/styles/overrides.scss'
 
-import KeycloakService from '@/sbc-common-components/services/keycloak.services'
+import KeycloakService from 'sbc-common-components/src/services/keycloak.services'
 
 declare const window: any
 

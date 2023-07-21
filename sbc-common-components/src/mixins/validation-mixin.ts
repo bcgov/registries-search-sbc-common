@@ -1,4 +1,3 @@
-import { Component, Vue } from 'vue-property-decorator'
 import { defineComponent, ref } from 'vue'
 
 /**

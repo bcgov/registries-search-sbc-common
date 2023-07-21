@@ -5,7 +5,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 // Components
-import SbcSignout from '@/sbc-common-components/components/SbcSignout.vue'
+import SbcSignout from 'sbc-common-components/src/components/SbcSignout.vue'
 
 const logoutURL = computed(
   () => `${sessionStorage.getItem('REGISTRY_URL')}?logout=true`

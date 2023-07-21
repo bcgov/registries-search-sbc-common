@@ -9,7 +9,7 @@
     "url": "https://github.com/bcgov/sbc-common-components.git"
   },
   "scripts": {
-    "serve": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name sbc-common-lib src/components/global.js",
     "lint": "vue-cli-service lint",
     "lint:nofix": "vue-cli-service lint --no-fix",
@@ -32,7 +32,7 @@
     "provinces": "^1.11.0",
     "regenerator-runtime": "^0.13.3",
     "regular": "^0.1.6",
-    "vue": "^3.2.13",
+    "vue": "3.2.31",
     "vue-facing-decorator": "^2.1.20",
     "vue-i18n": "^9.2.2",
     "vue-router": "^4.0.3",
@@ -78,7 +78,6 @@
     "vue-cli-plugin-vuetify": "^2.0.3",
     "vue-facing-decorator": "^2.1.20",
     "vue-plugin-helper-decorator": "^0.0.11",
-    "vue-property-decorator": "^8.5.1",
     "vue-template-compiler": "2.6.12",
     "vuepress": "^0.14.11",
     "vuex-module-decorators": "^2.0.0"

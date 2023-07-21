@@ -7,14 +7,14 @@ import { SessionStorageKeys } from 'sbc-common-components/src/util/constants'
 import App from '@/App.vue'
 import { EntityInfo } from '@/components'
 import { BcrsBreadcrumb } from '@/bcrs-common-components'
-import { SbcHeader, SbcFooter } from '@/sbc-common-components'
+import { SbcHeader, SbcFooter } from 'sbc-common-components/src/components'
 // import vuetify from '@/plugins/vuetify'
 import { useAuth, useDocumentAccessRequest, useEntity } from '@/composables'
 import { ErrorCategories, ErrorCodes, ProductCode, ProductStatus, RouteNames } from '@/enums'
 import { SearchBusinessInfoBreadcrumb, SearchDashboardBreadcrumb, SearchHomeBreadCrumb } from '@/resources'
 import { DefaultError, EntityLoadError, PayDefaultError } from '@/resources/error-dialog-options'
 import { createVueRouter } from '@/router'
-import store from '@/store'
+import store from 'sbc-common-components/src/store'
 
 
 // FUTURE: replace this with actual tests on App.vue

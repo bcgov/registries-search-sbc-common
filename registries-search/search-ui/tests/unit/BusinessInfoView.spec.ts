@@ -8,7 +8,7 @@ import { AccountStatus, AccountTypes, DocumentType, FeeCodes, RouteNames, StaffR
 import { useAuth, useEntity, useFeeCalculator, useFilingHistory } from '@/composables'
 import { DocumentTypeDescriptions } from '@/resources'
 import { createVueRouter } from '@/router'
-import store from '@/store'
+import store from 'sbc-common-components/src/store'
 import { axios } from '@/utils'
 import { BusinessInfoView } from '@/views'
 // test utils

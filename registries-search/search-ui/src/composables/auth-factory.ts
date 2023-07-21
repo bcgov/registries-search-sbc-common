@@ -5,7 +5,7 @@ import { SessionStorageKeys } from 'sbc-common-components/src/util/constants'
 import { AccountTypes, ErrorCategories, ErrorCodes, ProductCode, ProductStatus, StaffRoles, UserRoles } from '@/enums'
 import { AuthI, CurrentAccountI } from '@/interfaces'
 import { getAccountProducts } from '@/requests'
-import keycloakServices from '@/sbc-common-components/services/keycloak.services'
+import keycloakServices from 'sbc-common-components/src/services/keycloak.services'
 import { getKeycloakName, getKeycloakRoles, updateLdUser } from '@/utils'
 
 const auth = reactive({

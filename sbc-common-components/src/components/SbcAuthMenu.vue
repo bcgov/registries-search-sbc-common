@@ -23,7 +23,6 @@
 <script setup lang="ts">
 // External
 import { computed, onMounted, watch } from 'vue'
-import { useStore } from 'vuex'
 import { getModule } from 'vuex-module-decorators'
 // BC Registries
 import { KCUserProfile } from '../../src/models/KCUserProfile'
@@ -34,6 +33,7 @@ import AccountModule from '../store/modules/account'
 import AuthModule from '../store/modules/auth'
 import { useNavigation } from '../composables'
 import KeyCloakService from '../services/keycloak.services'
+import store from '../store'
 
 const props = defineProps({
   fromLogin: { default: false },
@@ -42,7 +42,7 @@ const props = defineProps({
   redirectOnLoginFail: { default: '' }
 })
 
-const store = useStore()
+
 // set modules
 if (!store.hasModule('account')) store.registerModule('account', AccountModule)
 if (!store.hasModule('auth')) store.registerModule('auth', AuthModule)

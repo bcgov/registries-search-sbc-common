@@ -9,7 +9,7 @@ import { DocumentAccessRequestHistory, SearchBar, SearchResults } from '@/compon
 import { useAuth, useSearch } from '@/composables'
 import { RouteNames } from '@/enums'
 import { createVueRouter } from '@/router'
-import store from '@/store'
+import store from 'sbc-common-components/src/store'
 import { axios } from '@/utils'
 import { DashboardView } from '@/views'
 // test data

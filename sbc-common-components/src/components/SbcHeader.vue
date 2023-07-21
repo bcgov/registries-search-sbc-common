@@ -302,7 +302,7 @@
 // External
 import { computed, defineComponent, nextTick, onMounted, watch, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { useStore } from 'vuex'
+
 import { getModule } from 'vuex-module-decorators'
 // BC Registry
 // sbc modules
@@ -328,6 +328,7 @@ import { default as MobileDeviceAlert } from './MobileDeviceAlert.vue'
 import { default as NotificationPanel } from './NotificationPanel.vue'
 import { default as SbcProductSelector } from './SbcProductSelector.vue'
 import { useNavigation } from '../composables'
+import store from '../store'
 
 export default defineComponent({
   name: 'SbcHeader',
@@ -351,7 +352,6 @@ export default defineComponent({
   setup(props, { emit }) {
     const route = useRoute()
     const router = useRouter()
-    const store = useStore()
     
     // set modules
     if (!store.hasModule('account')) store.registerModule('account', AccountModule)

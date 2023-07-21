@@ -1,17 +1,15 @@
-import Vuex, { StoreOptions } from 'vuex'
+import { createStore } from 'vuex'
 
-import { RootState } from './types'
-import StatusModule from '@/store/modules/status'
-import AccountModule from '@/store/modules/account'
-import AuthModule from '@/store/modules/auth'
-import NotificationModule from '@/store/modules/notification'
-import ProductModule from '@/store/modules/product'
-import UserModule from '@/store/modules/userStub'
-import Vue from 'vue'
+import StatusModule from './modules/status'
+import AccountModule from './modules/account'
+import AuthModule from './modules/auth'
+import NotificationModule from './modules/notification'
+import ProductModule from './modules/product'
+import UserModule from './modules/userStub'
 
 const debug = process.env.NODE_ENV !== 'production'
 
-const storeOptions: StoreOptions<RootState> = {
+export default createStore({
   strict: debug,
   state: () => ({
     refreshKey: 0,
@@ -37,5 +35,4 @@ const storeOptions: StoreOptions<RootState> = {
     user: UserModule
   }
 }
-
-export default new Vuex.Store<RootState>(storeOptions)
+)

@@ -6,7 +6,7 @@
 import { useRoute } from 'vue-router'
 import { navigate } from '@/utils'
 // Components
-import SbcSignin from '@/sbc-common-components/components/SbcSignin.vue'
+import SbcSignin from 'sbc-common-components/src/components/SbcSignin.vue'
 
 const route = useRoute()
 const props = defineProps({
